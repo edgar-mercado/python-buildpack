@@ -12,20 +12,21 @@
 BUILD_DIR=$1
 BP=$(dirname $(dirname $0))
 
+echo "python ----------------------------------- "
 
 if [ ! -f $BUILD_DIR/requirements.txt ] && [ ! -f $BUILD_DIR/setup.py ] && [ ! -f $BUILD_DIR/environment.yml ] && [ ! -f $BUILD_DIR/Pipfile ]; then
   exit 1
 fi
 
 if [ ! -f $BUILD_DIR/requirements.txt ]; then
-  echo "Working on file requirements:  `cat $BUILD_DIR/requirements.txt`"
+  echo "@@@@@@@@@@@@@@@@@ Working on file requirements:  `cat $BUILD_DIR/requirements.txt`"
 fi
 if [ ! -f $BUILD_DIR/setup.py ]; then
-  echo "Working on file setup:  `cat $BUILD_DIR/requirements.txt`"
+  echo "@@@@@@@@@@@@@@@@@ Working on file setup:  `cat $BUILD_DIR/requirements.txt`"
 fi
 
 if [ ! -f $BUILD_DIR/environment.yml ]; then
-  echo "Working on file environment:  `cat $BUILD_DIR/requirements.txt`"
+  echo "@@@@@@@@@@@@@@@@@ Working on file environment:  `cat $BUILD_DIR/requirements.txt`"
 fi
 
 # Exit early if app is clearly not Python.
